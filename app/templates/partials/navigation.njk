@@ -1,0 +1,36 @@
+<nav class="navbar" aria-label="main navigation">
+   <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+         <img class="logo" src="images/logo.png" alt="Logo" >
+      </a>
+
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarTop">
+         <span aria-hidden="true"></span>
+         <span aria-hidden="true"></span>
+         <span aria-hidden="true"></span>
+      </a>
+   </div>
+
+   <div id="navbarTop" class="navbar-menu">
+      <div class="navbar-end tabs">
+         <ul>
+            <li {% if page == 'services' %}class="is-active"{% endif %}>
+               <a class="navbar-item" href="/services.html">
+                  <span class="icon"><i class="fas fa-cogs"></i></span> Services
+               </a>
+            </li>
+            <li {% if page == 'about' %}class="is-active"{% endif %}>
+               <a class="navbar-item" href="/about.html">
+                  <span class="icon"><i class="fas fa-address-card"></i></span> About
+               </a>
+            </li>
+            <li {% if page == 'contact' %}class="is-active"{% endif %}>
+               <a class="navbar-item" href="contact.html">
+                  <span class="icon"><i class="fas fa-envelope"></i></span> Contact
+               </a>
+            </li>
+         </ul>
+      </div>
+   </div>
+</nav>
+

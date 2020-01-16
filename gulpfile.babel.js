@@ -1,0 +1,171 @@
+'use strict'
+
+import gulp from 'gulp'
+
+import browserSync from 'browser-sync'
+import del from 'del'
+import merge from 'merge-stream'
+import sourcemaps from 'gulp-sourcemaps'
+
+import cleanCss from 'gulp-clean-css'
+import sass from 'gulp-sass'
+import scsslint from 'gulp-scss-lint'
+
+import babel from 'rollup-plugin-babel'
+import commonjs from '@rollup/plugin-commonjs'
+import eslint from 'gulp-eslint'
+import resolve from '@rollup/plugin-node-resolve'
+import rollup from 'gulp-better-rollup'
+import uglify from 'gulp-uglify'
+
+import favicons from 'gulp-favicons'
+import image from 'gulp-image'
+
+import inject from 'gulp-inject'
+import nunjucksRender from 'gulp-nunjucks-render'
+import htmlValidator from 'gulp-w3c-html-validator'
+
+const paths = {
+  css: {
+    src: 'app/scss/**/*.scss',
+    dest: 'public/css'
+  },
+  images: {
+    src: 'app/images/**/*.{jpg,png}',
+    dest: 'public/images'
+  },
+  scripts: {
+    src: 'app/scripts/**/*.js',
+    dest: 'public/scripts'
+  },
+  pages: {
+    src: 'app/pages/**/*.njk',
+    dest: 'public'
+  },
+  templates: {
+    src: 'app/templates'
+  }
+}
+
+export const clean = () => del(['public'])
+
+const server = browserSync.create()
+
+export function css () {
+  return gulp.src(paths.css.src)
+    .pipe(scsslint())
+    .pipe(scsslint.failReporter())
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(cleanCss())
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(paths.css.dest))
+    .pipe(server.stream())
+}
+
+export function images () {
+  return gulp.src(paths.images.src)
+    .pipe(image())
+    .pipe(gulp.dest(paths.images.dest))
+}
+
+export function scripts () {
+  return gulp.src(paths.scripts.src, { sourcemaps: true })
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError())
+    .pipe(sourcemaps.init())
+    .pipe(rollup(
+      { plugins: [babel(), resolve({ preferBuiltins: true, mainFields: ['browser'] }), commonjs()] },
+      { format: 'umd' }))
+    .pipe(uglify())
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(paths.scripts.dest))
+    .pipe(server.stream())
+}
+
+export function pages () {
+  return gulp.src(paths.pages.src)
+    .pipe(nunjucksRender({
+      path: [paths.templates.src]
+    }))
+    .pipe(inject(gulp.src(['public/favicons/favicon.html']), {
+      starttag: '<!-- inject:head:{{ext}} -->',
+      transform: (filePath, file) => {
+        return file.contents.toString('utf8') // return file contents as string
+      }
+    }))
+    .pipe(htmlValidator())
+    .pipe(htmlValidator.reporter())
+    .pipe(gulp.dest(paths.pages.dest))
+    .pipe(server.stream())
+}
+
+export function vendor () {
+  return merge(
+    gulp.src('node_modules/slick-carousel/slick/ajax-loader.gif').pipe(gulp.dest('public/images'))
+  )
+}
+
+export function favicon () {
+  return gulp.src('app/images/logo2.png')
+    .pipe(favicons({
+      appName: 'Vihanti Digital Services',
+      appShortName: 'Vihanti',
+      appDescription: 'Creativity Unleashed',
+      background: '#09245A',
+      path: 'favicons/',
+      url: 'https://www.vihanti.com/',
+      display: 'standalone',
+      orientation: 'portrait',
+      scope: '/',
+      start_url: '/',
+      version: 1.0,
+      logging: false,
+      html: 'favicon.html',
+      pipeHTML: true,
+      replace: true,
+      icons: {
+        android: false,
+        appleIcon: false,
+        appleStartup: false,
+        coast: false,
+        favicons: true,
+        firefox: false,
+        windows: false,
+        yandex: false
+      }
+    }))
+    .pipe(gulp.dest('public/favicons'))
+}
+
+export function build (done) {
+  return gulp.series(
+    gulp.parallel(vendor, favicon, css, images, scripts),
+    pages
+  )(done)
+}
+
+// Serve for development by default
+function reload (done) {
+  server.reload()
+  done()
+}
+
+export function serve (done) {
+  server.init({
+    server: {
+      baseDir: 'public'
+    }
+  })
+
+  gulp.watch(paths.css.src, css)
+  gulp.watch(paths.images.src, gulp.series(images, reload))
+  gulp.watch(paths.scripts.src, scripts)
+  gulp.watch(paths.pages.src, gulp.series(pages, reload))
+  gulp.watch(paths.templates.src, gulp.series(pages, reload))
+
+  done()
+}
+
+export default gulp.series(clean, build, serve)

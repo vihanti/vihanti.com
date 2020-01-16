@@ -1,0 +1,121 @@
+@import 'base';
+
+$offer-background-color: #025889;
+$tech-background-color: #00557d;
+$career-background-color: #08235b;
+
+$slick-loader-path: '../images/';
+$slick-font-family: 'Font Awesome 5 Pro';
+$slick-prev-character: '\f359';
+$slick-next-character: '\f35a';
+$slick-arrow-color: $black;
+
+// scss-lint:disable ImportPath
+@import '../../node_modules/slick-carousel/slick/slick.scss';
+@import '../../node_modules/slick-carousel/slick/slick-theme.scss';
+// scss-lint:enable ImportPath
+
+.title {
+  text-transform: uppercase;
+}
+
+.offer {
+  background-color: $offer-background-color;
+  color: $white;
+
+  .title,
+  .subtitle {
+    color: $white;
+  }
+}
+
+.questions {
+  background-color: $black;
+
+  .title,
+  .subtitle {
+    color: $white;
+  }
+
+  .tag {
+    background-color: transparent;
+    border: 1px solid $gold;
+    color: $gold;
+  }
+
+  .questions-carousel {
+    background-color: $white;
+    color: $black;
+
+    .hero-body {
+      padding: .5rem 1.5rem;
+    }
+  }
+
+  .slick-track {
+    display: flex;
+
+    .slick-slide {
+      align-items: center;
+      display: flex;
+      height: auto;
+      justify-content: center;
+    }
+  }
+
+  .slick-next,
+  .slick-prev {
+    font-weight: 900;
+  }
+}
+
+.tech {
+  background-color: $tech-background-color;
+  color: $white;
+
+  @include mobile {
+    .logos {
+      display: flex;
+
+      .box {
+        padding: 3px;
+      }
+
+      .column {
+        padding: 3px;
+      }
+    }
+  }
+
+  .box {
+    height: 100%;
+  }
+
+  .title,
+  .subtitle {
+    color: $white;
+  }
+}
+
+.contact {
+  .hero {
+    background-color: $black;
+    color: $white;
+  }
+
+  .button {
+    background-color: transparent;
+    border: 1px solid $white;
+    color: $white;
+  }
+}
+
+.career {
+  background-color: $career-background-color;
+  color: $white;
+
+  button {
+    margin-top: 2em;
+  }
+}
+

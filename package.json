@@ -1,0 +1,45 @@
+{
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/register": "^7.8.3",
+    "@rollup/plugin-commonjs": "^11.0.1",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "browser-sync": "^2.26.7",
+    "bulma": "^0.8.0",
+    "del": "^5.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "gulp": "^4.0.2",
+    "gulp-better-rollup": "^4.0.1",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-eslint": "^6.0.0",
+    "gulp-favicons": "^2.4.0",
+    "gulp-image": "^6.0.0",
+    "gulp-inject": "^5.0.5",
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-sass": "^4.0.2",
+    "gulp-scss-lint": "^1.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-tap": "^2.0.0",
+    "gulp-uglify": "^3.0.2",
+    "jquery": "^3.4.1",
+    "jquery-validation": "^1.19.1",
+    "merge-stream": "^2.0.0",
+    "rollup": "^1.29.1",
+    "rollup-plugin-babel": "^4.3.3",
+    "slick-carousel": "^1.8.1"
+  },
+  "scripts": {
+    "build": "gem install scss_lint && gulp build"
+  },
+  "dependencies": {
+    "gulp-w3c-html-validator": "^1.4.4"
+  }
+}

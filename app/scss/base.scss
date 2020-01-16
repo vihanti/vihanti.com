@@ -1,0 +1,141 @@
+@charset 'utf-8';
+
+@import '../../node_modules/bulma/sass/utilities/initial-variables';
+
+$gold: #9ee71e;
+$footer-color: #08235b;
+$footer-border-color: #818078;
+$footer-link-color: #4e5878;
+
+$navbar-background-color: #050b0c;
+$button-padding-horizontal: 1.5em;
+$control-height: 2.8em;
+$tabs-border-bottom-color: #2b2c2e;
+$tabs-link-color: #a9aaab;
+$tabs-link-hover-border-bottom-color: $white;
+$tabs-link-hover-color: $white;
+$tabs-link-active-border-bottom-color: $white;
+$tabs-link-active-color: $white;
+
+@import '../../node_modules/bulma/bulma';
+
+.is-vertical-center {
+  align-items: center;
+  display: inline-flex;
+}
+
+.lower {
+  @include desktop {
+    margin-top: 2em;
+  }
+}
+
+.columns.is-reverse-mobile {
+  @include mobile {
+    display: flex;
+    flex-direction: column-reverse;
+
+    .column {
+      width: 100%;
+    }
+  }
+}
+
+.button {
+  text-transform: uppercase;
+}
+
+.welcome {
+  background-color: $navbar-background-color;
+  height: 100%;
+
+  .hero-body {
+    padding: 6rem 1.5rem;
+  }
+
+  .title {
+    color: $white;
+    font-size: 4em;
+  }
+
+  .subtitle {
+    color: $gold;
+    font-size: 2em;
+  }
+}
+
+.navbar {
+  .logo {
+    margin: .5em;
+    max-height: 5em;
+  }
+
+  .icon {
+    margin-right: .25em;
+  }
+
+  .navbar-menu {
+    margin-right: 2em;
+
+    .navbar-item {
+      background: transparent;
+      font-size: smaller;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.footer {
+  background-color: $footer-color;
+  padding-bottom: 20px;
+  padding-top: 10px;
+
+  .logo {
+    background-color: $footer-color;
+    border: 0;
+    height: 40px;
+    margin-top: 10px;
+    outline: 0;
+    position: relative;
+    text-align: center;
+
+    &::before {
+      background: linear-gradient(to right, transparent, $footer-border-color, transparent);
+      content: '';
+      height: 1px;
+      left: 0;
+      position: absolute;
+      top: 50%;
+      width: 100%;
+    }
+
+    &::after {
+      background: $footer-color url('../images/logo2.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      content: '';
+      display: inline-block;
+      height: 40px;
+      position: relative;
+      width: 70px;
+    }
+  }
+
+  a {
+    color: $footer-link-color;
+    font-size: smaller;
+    margin: 0 1em;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $white;
+    }
+
+    &.is-active {
+      color: $white;
+    }
+  }
+}
+
