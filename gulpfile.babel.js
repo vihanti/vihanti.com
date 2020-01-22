@@ -24,6 +24,8 @@ import image from 'gulp-image'
 import inject from 'gulp-inject'
 import nunjucksRender from 'gulp-nunjucks-render'
 import htmlValidator from 'gulp-w3c-html-validator'
+import save from 'gulp-save'
+import sitemap from 'gulp-sitemap'
 
 const paths = {
   css: {
@@ -97,13 +99,20 @@ export function pages () {
     }))
     .pipe(htmlValidator())
     .pipe(htmlValidator.reporter())
+
+    .pipe(save('before-sitemap'))
+    .pipe(sitemap({ siteUrl: 'https://www.vihanti.com' }))
+    .pipe(gulp.dest(paths.pages.dest))
+    .pipe(save.restore('before-sitemap'))
+
     .pipe(gulp.dest(paths.pages.dest))
     .pipe(server.stream())
 }
 
-export function vendor () {
+export function copy () {
   return merge(
-    gulp.src('node_modules/slick-carousel/slick/ajax-loader.gif').pipe(gulp.dest('public/images'))
+    gulp.src('node_modules/slick-carousel/slick/ajax-loader.gif').pipe(gulp.dest('public/images')),
+    gulp.src('app/robots.txt').pipe(gulp.dest('public'))
   )
 }
 
@@ -141,7 +150,7 @@ export function favicon () {
 
 export function build (done) {
   return gulp.series(
-    gulp.parallel(vendor, favicon, css, images, scripts),
+    gulp.parallel(copy, favicon, css, images, scripts),
     pages
   )(done)
 }
