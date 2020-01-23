@@ -7,6 +7,7 @@
     "@babel/register": "^7.8.3",
     "@rollup/plugin-commonjs": "^11.0.1",
     "@rollup/plugin-node-resolve": "^7.0.0",
+    "anicollection": "^1.0.0",
     "browser-sync": "^2.26.7",
     "bulma": "^0.8.0",
     "del": "^5.1.0",
@@ -26,8 +27,8 @@
     "gulp-nunjucks-render": "^2.2.3",
     "gulp-sass": "^4.0.2",
     "gulp-save": "^1.3.0",
-    "gulp-sitemap": "^7.6.0",
     "gulp-scss-lint": "^1.0.0",
+    "gulp-sitemap": "^7.6.0",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-tap": "^2.0.0",
     "gulp-uglify": "^3.0.2",
@@ -37,9 +38,11 @@
     "merge-stream": "^2.0.0",
     "rollup": "^1.29.1",
     "rollup-plugin-babel": "^4.3.3",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "waypoints": "^4.0.1"
   },
   "scripts": {
     "build": "gem install scss_lint && gulp build"
-  }
+  },
+  "dependencies": {}
 }

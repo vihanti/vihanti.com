@@ -1,0 +1,49 @@
+@import '../../node_modules/anicollection/dist/anicollection';
+
+// scss-lint:disable VendorPrefix
+
+// Expand out the letters until they fade out completely
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin expanding-letters($name) {
+  -webkit-animation-name: $name;
+  animation-name: $name;
+
+  @include keyframes($name) {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      letter-spacing: 100px;
+      opacity: 0;
+    }
+  }
+
+  @content;
+}
+
+.expanding-letters-fade-out {
+  @include expanding-letters(expandingLettersFadeOut);
+}
+
+.expanding-letters-fade-in {
+  @include expanding-letters(expandingLettersFadeIn);
+
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+

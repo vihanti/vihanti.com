@@ -1193,6 +1193,11 @@ amdefine@>=0.0.4:
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
   integrity sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU=
 
+anicollection@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/anicollection/-/anicollection-1.0.0.tgz#f5724dedf7adbf851ad8811fa00b88e8f33dc315"
+  integrity sha1-9XJN7fetv4Ua2IEfoAuI6PM9wxU=
+
 ansi-colors@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-1.1.0.tgz#6374b4dd5d4718ff3ce27a671a3b1cad077132a9"
@@ -8836,6 +8841,11 @@ w3cjs@~0.4:
     commander "^2.9.0"
     superagent "^3.5.2"
     superagent-proxy "^1.0.2"
+
+waypoints@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/waypoints/-/waypoints-4.0.1.tgz#09979a0573810b29627cba4366a284a062ec69c8"
+  integrity sha1-CZeaBXOBCylifLpDZqKEoGLsacg=
 
 which-module@^1.0.0:
   version "1.0.0"

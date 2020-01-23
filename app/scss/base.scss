@@ -30,6 +30,10 @@ $tabs-link-active-color: $white;
   }
 }
 
+.no-opacity {
+  opacity: 0;
+}
+
 .columns.is-reverse-mobile {
   @include mobile {
     display: flex;
