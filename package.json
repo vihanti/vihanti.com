@@ -39,6 +39,7 @@
     "merge-stream": "^2.0.0",
     "rollup": "^1.29.1",
     "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-terser": "^5.2.0",
     "slick-carousel": "^1.8.1",
     "waypoints": "^4.0.1"
   },

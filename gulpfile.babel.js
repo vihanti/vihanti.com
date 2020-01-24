@@ -16,7 +16,7 @@ import commonjs from '@rollup/plugin-commonjs'
 import eslint from 'gulp-eslint'
 import resolve from '@rollup/plugin-node-resolve'
 import rollup from 'gulp-better-rollup'
-import uglify from 'gulp-uglify'
+import { terser } from 'rollup-plugin-terser'
 
 import favicons from 'gulp-favicons'
 import image from 'gulp-image'
@@ -37,7 +37,7 @@ const paths = {
     dest: 'public/images'
   },
   scripts: {
-    src: 'app/scripts/**/*.js',
+    src: 'app/scripts/app.js',
     dest: 'public/scripts'
   },
   pages: {
@@ -71,16 +71,22 @@ export function images () {
     .pipe(gulp.dest(paths.images.dest))
 }
 
-export function scripts () {
-  return gulp.src(paths.scripts.src, { sourcemaps: true })
+export function scripts (done) {
+  return gulp.src(paths.scripts.src)
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError())
     .pipe(sourcemaps.init())
     .pipe(rollup(
-      { plugins: [babel(), resolve({ preferBuiltins: true, mainFields: ['browser'] }), commonjs()] },
+      {
+        plugins: [
+          babel(),
+          resolve({ preferBuiltins: true, mainFields: ['browser'] }),
+          commonjs(),
+          terser()
+        ]
+      },
       { format: 'umd' }))
-    .pipe(uglify())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.scripts.dest))
     .pipe(server.stream())
