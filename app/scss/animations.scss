@@ -22,6 +22,7 @@
   -webkit-animation-name: $name;
   animation-name: $name;
   white-space: nowrap;
+  overflow: hidden;
 
   @include keyframes($name) {
     0% {
