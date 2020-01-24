@@ -6,6 +6,9 @@ $gold: #9ee71e;
 $footer-color: #08235b;
 $footer-border-color: #818078;
 $footer-link-color: #4e5878;
+$variant1-background-color: #025889;
+$variant2-background-color: $black;
+$variant3-background-color: #08235b;
 
 $navbar-background-color: #050b0c;
 $button-padding-horizontal: 1.5em;
@@ -103,6 +106,36 @@ $tabs-link-active-color: $white;
       font-size: smaller;
       text-transform: uppercase;
     }
+  }
+}
+
+.is-variant1 {
+  background-color: $variant1-background-color;
+  color: $white;
+
+  .title,
+  .subtitle {
+    color: $white;
+  }
+}
+
+.is-variant2 {
+  background-color: $variant2-background-color;
+  color: $white;
+
+  .title,
+  .subtitle {
+    color: $white;
+  }
+}
+
+.is-variant3 {
+  background-color: $variant3-background-color;
+  color: $white;
+
+  .title,
+  .subtitle {
+    color: $white;
   }
 }
 

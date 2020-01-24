@@ -1,10 +1,6 @@
 @import 'base';
 @import 'animations';
 
-$offer-background-color: #025889;
-$tech-background-color: #00557d;
-$career-background-color: #08235b;
-
 $slick-loader-path: '../images/';
 $slick-font-family: 'Font Awesome 5 Free';
 $slick-prev-character: '\f359';
@@ -20,24 +16,13 @@ $slick-arrow-color: $black;
   text-transform: uppercase;
 }
 
-.offer {
-  background-color: $offer-background-color;
-  color: $white;
-
-  .title,
-  .subtitle {
-    color: $white;
+.header {
+  .tag {
+    background: transparent;
   }
 }
 
 .questions {
-  background-color: $black;
-
-  .title,
-  .subtitle {
-    color: $white;
-  }
-
   .tag {
     background-color: transparent;
     border: 1px solid $gold;
@@ -71,9 +56,6 @@ $slick-arrow-color: $black;
 }
 
 .tech {
-  background-color: $tech-background-color;
-  color: $white;
-
   @include mobile {
     .logos {
       display: flex;
@@ -91,11 +73,6 @@ $slick-arrow-color: $black;
   .box {
     height: 100%;
   }
-
-  .title,
-  .subtitle {
-    color: $white;
-  }
 }
 
 .contact {
@@ -112,9 +89,6 @@ $slick-arrow-color: $black;
 }
 
 .career {
-  background-color: $career-background-color;
-  color: $white;
-
   button {
     margin-top: 2em;
   }
