@@ -25,6 +25,12 @@ $(document).ready(() => {
 
   // Initialize animations.
   $('.animated')
+    .css('opacity', function () {
+      const animated = $(this).data('animated')
+      if (animated.indexOf('In') !== -1) {
+        return 0
+      }
+    })
     .waypoint(function (direction) {
       const animated = $(this.element).data('animated')
       const animatedReverse = $(this.element).data('animated-reverse')
