@@ -58,7 +58,9 @@ export function css () {
     .pipe(scsslint())
     .pipe(scsslint.failReporter())
     .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({
+      includePaths: ['node_modules']
+    }).on('error', sass.logError))
     .pipe(cleanCss())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.css.dest))
@@ -117,6 +119,7 @@ export function pages () {
 
 export function copy () {
   return merge(
+    gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/*').pipe(gulp.dest('public/webfonts')),
     gulp.src('node_modules/slick-carousel/slick/ajax-loader.gif').pipe(gulp.dest('public/images')),
     gulp.src('node_modules/particles.js/particles.js').pipe(gulp.dest('public/scripts')),
     gulp.src('app/robots.txt').pipe(gulp.dest('public')),

@@ -1,6 +1,6 @@
 @charset 'utf-8';
 
-@import '../../node_modules/bulma/sass/utilities/initial-variables';
+@import 'bulma/sass/utilities/initial-variables';
 
 $gold: #9ee71e;
 $footer-color: #08235b;
@@ -17,7 +17,12 @@ $tabs-link-hover-color: $white;
 $tabs-link-active-border-bottom-color: $white;
 $tabs-link-active-color: $white;
 
-@import '../../node_modules/bulma/bulma';
+@import 'bulma/bulma';
+
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/regular';
+@import '@fortawesome/fontawesome-free/scss/brands';
 
 .is-vertical-center {
   align-items: center;

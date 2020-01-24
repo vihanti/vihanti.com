@@ -65,7 +65,5 @@ $(document).ready(() => {
   })
 
   // Initialize particles.
-  window.particlesJS.load('particles', 'assets/particles.json', function () {
-    console.log('callback - particles-js config loaded')
-  })
+  window.particlesJS.load('particles', 'assets/particles.json')
 })
