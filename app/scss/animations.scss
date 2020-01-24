@@ -21,6 +21,7 @@
 @mixin expanding-letters($name) {
   -webkit-animation-name: $name;
   animation-name: $name;
+  white-space: nowrap;
 
   @include keyframes($name) {
     0% {

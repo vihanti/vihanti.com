@@ -60,6 +60,10 @@ $tabs-link-active-color: $white;
   .title {
     color: $white;
     font-size: 4em;
+
+    @include mobile {
+      font-size: 10vw;
+    }
   }
 
   .subtitle {
