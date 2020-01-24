@@ -21,12 +21,14 @@
     <!-- inject:head:html -->
     <!-- endinject -->
 
+    <script src="scripts/particles.js"></script>
     <script async src="scripts/app.js"></script>
 
     {% block head %} {% endblock %}
   </head>
   <body>
-    <section class="welcome hero has-text-centered">
+    <section class="welcome hero has-text-centered is-relative">
+      <div id="particles"></div>
       <div class="hero-head">
          {% include "partials/navigation.njk" %}
       </div>

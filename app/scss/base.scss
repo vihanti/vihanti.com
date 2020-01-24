@@ -49,6 +49,15 @@ $tabs-link-active-color: $white;
   text-transform: uppercase;
 }
 
+// scss-lint:disable IdSelector
+#particles {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+// scss-lint:enable IdSelector
+
+
 .welcome {
   background-color: $navbar-background-color;
   height: 100%;

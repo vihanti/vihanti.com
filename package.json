@@ -37,6 +37,7 @@
     "jquery-validation": "^1.19.1",
     "lodash.template": "^4.5.0",
     "merge-stream": "^2.0.0",
+    "particles.js": "^2.0.0",
     "rollup": "^1.29.1",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-terser": "^5.2.0",
