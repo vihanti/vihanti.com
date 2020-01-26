@@ -119,11 +119,18 @@ export function pages () {
 
 export function copy () {
   return merge(
-    gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/*').pipe(gulp.dest('public/webfonts')),
-    gulp.src('node_modules/slick-carousel/slick/ajax-loader.gif').pipe(gulp.dest('public/images')),
-    gulp.src('node_modules/particles.js/particles.js').pipe(gulp.dest('public/scripts')),
-    gulp.src('app/robots.txt').pipe(gulp.dest('public')),
-    gulp.src('app/assets/*').pipe(gulp.dest('public/assets'))
+    gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/*')
+      .pipe(gulp.dest('public/fonts')),
+    gulp.src('node_modules/slick-carousel/slick/ajax-loader.gif')
+      .pipe(gulp.dest('public/images')),
+    gulp.src('node_modules/particles.js/particles.js')
+      .pipe(gulp.dest('public/scripts')),
+    gulp.src('app/robots.txt')
+      .pipe(gulp.dest('public')),
+    gulp.src('app/assets/*')
+      .pipe(gulp.dest('public/assets')),
+    gulp.src('app/fonts/*')
+      .pipe(gulp.dest('public/fonts'))
   )
 }
 
