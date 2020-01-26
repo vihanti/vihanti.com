@@ -49,3 +49,17 @@
        url('../fonts/montserrat-v14-latin-900.ttf') format('truetype'),
        url('../fonts/montserrat-v14-latin-900.svg#Montserrat') format('svg');
 }
+
+@font-face {
+  font-family: 'Bank Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Bank-Gothic-Medium.eot');
+  src: local('Bank Gothic Medium'), local('Bank-Gothic-Medium'),
+       url('../fonts/Bank-Gothic-Medium.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Bank-Gothic-Medium.woff2') format('woff2'),
+       url('../fonts/Bank-Gothic-Medium.woff') format('woff'),
+       url('../fonts/Bank-Gothic-Medium.ttf') format('truetype'),
+       url('../fonts/Bank-Gothic-Medium.svg') format('svg');
+}
+
