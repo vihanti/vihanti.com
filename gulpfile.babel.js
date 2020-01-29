@@ -73,7 +73,7 @@ export function images () {
     .pipe(gulp.dest(paths.images.dest))
 }
 
-export function scripts (done) {
+export function scripts () {
   return gulp.src(paths.scripts.src)
     .pipe(eslint())
     .pipe(eslint.format())
