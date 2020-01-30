@@ -1,7 +1,14 @@
 @import 'base';
 @import 'animations';
 
-.people .card {
-  height: 100%;
+.people .column {
+  margin: 0 auto;
+
+  .card {
+    height: 100%;
+    margin: 0 auto;
+    max-width: 300px;
+    width: 100%;
+  }
 }
 
