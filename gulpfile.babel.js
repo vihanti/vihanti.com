@@ -4,6 +4,7 @@ import gulp from 'gulp'
 
 import browserSync from 'browser-sync'
 import del from 'del'
+import fs from 'fs'
 import merge from 'merge-stream'
 import sourcemaps from 'gulp-sourcemaps'
 
@@ -64,7 +65,7 @@ export function css () {
     .pipe(cleanCss())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.css.dest))
-    .pipe(server.stream())
+    .pipe(server.stream({ match: '**/*.css' }))
 }
 
 export function images () {
@@ -91,7 +92,6 @@ export function scripts () {
       { format: 'umd' }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.scripts.dest))
-    .pipe(server.stream())
 }
 
 export function pages () {
@@ -114,7 +114,6 @@ export function pages () {
     .pipe(save.restore('before-sitemap'))
 
     .pipe(gulp.dest(paths.pages.dest))
-    .pipe(server.stream())
 }
 
 export function copy () {
@@ -180,15 +179,25 @@ function reload (done) {
 }
 
 export function serve (done) {
+  const html404 = fs.readFileSync('public/404.html')
+
   server.init({
     server: {
       baseDir: 'public'
+    }
+  },
+  (err, bs) => {
+    if (!err) {
+      bs.addMiddleware('*', (req, res) => {
+        res.write(html404)
+        res.end()
+      })
     }
   })
 
   gulp.watch(paths.css.src, css)
   gulp.watch(paths.images.src, gulp.series(images, reload))
-  gulp.watch(paths.scripts.src, scripts)
+  gulp.watch(paths.scripts.src, gulp.series(scripts, reload))
   gulp.watch(paths.pages.src, gulp.series(pages, reload))
   gulp.watch(paths.templates.src, gulp.series(pages, reload))
 

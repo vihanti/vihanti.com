@@ -4,22 +4,12 @@
 
 // Expand out the letters until they fade out completely
 @mixin keyframes($name) {
-  @-webkit-keyframes #{$name} {
-    @content;
-  }
-  @-moz-keyframes #{$name} {
-    @content;
-  }
-  @-ms-keyframes #{$name} {
-    @content;
-  }
   @keyframes #{$name} {
     @content;
   }
 }
 
 @mixin expanding-letters($name) {
-  -webkit-animation-name: $name;
   animation-name: $name;
   white-space: nowrap;
   overflow: hidden;
@@ -45,7 +35,25 @@
 .expanding-letters-fade-in {
   @include expanding-letters(expandingLettersFadeIn);
 
-  -webkit-animation-direction: reverse;
   animation-direction: reverse;
 }
 
+// Hinge and stay swinging
+@keyframes swing {
+  0% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+.swing {
+  animation: swing 2.5s ease-in-out forwards infinite;
+  transform-origin: 50% 0;
+}
