@@ -5,7 +5,14 @@
   height: 100%;
 }
 
-.3bl .column {
-  margin-bottom: 0;
+.triple-bottom-line {
+  .column {
+    margin-bottom: 0;
+  }
 }
 
+.is-variant2 {
+  .subtitle strong {
+    color: $gold;
+  }
+}

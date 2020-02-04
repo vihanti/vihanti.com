@@ -11,14 +11,17 @@ $fa-font-path: '../fonts';
 @import 'bulma/sass/utilities/initial-variables';
 
 $gold: #9ee71e;
+
 $footer-color: #08235b;
 $footer-border-color: #818078;
 $footer-link-color: #4e5878;
-$variant1-background-color: #025889;
-$variant2-background-color: $black;
-$variant3-background-color: #08235b;
-
-$navbar-background-color: #050b0c;
+$variant1-background-color: #09235a;
+$variant2-background-color: rgba(0, 0, 0, .8);
+$variant3-background-color: rgba(8, 36, 89, .5);
+$variant4-background-color: $white;
+$variant5-background-color: #08235b;
+$variant6-background-color: #ebebeb;
+$navbar-background-color: rgba(0, 0, 0, .95);
 $button-padding-horizontal: 1.5em;
 $control-height: 2.8em;
 $tabs-border-bottom-color: #2b2c2e;
@@ -27,6 +30,11 @@ $tabs-link-hover-border-bottom-color: $white;
 $tabs-link-hover-color: $white;
 $tabs-link-active-border-bottom-color: $white;
 $tabs-link-active-color: $white;
+$text: $black;
+$title-color: #082459;
+$title-strong-color: $title-color;
+$subtitle-color: $title-color;
+$subtitle-strong-color: $title-color;
 
 $family-sans-serif: 'Montserrat', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 
@@ -58,6 +66,11 @@ $family-sans-serif: 'Montserrat', BlinkMacSystemFont, -apple-system, 'Segoe UI',
   text-transform: uppercase;
 }
 
+.title,
+.subtitle {
+  text-transform: uppercase;
+}
+
 // scss-lint:disable IdSelector
 #particles {
   height: 100%;
@@ -67,11 +80,17 @@ $family-sans-serif: 'Montserrat', BlinkMacSystemFont, -apple-system, 'Segoe UI',
 // scss-lint:enable IdSelector
 
 .header {
-  background-color: $navbar-background-color;
+  background: linear-gradient($navbar-background-color, $navbar-background-color), url('../images/office.jpg');
+  background-position: center 60%;
+  background-size: 100%;
   height: 100%;
 
   .hero-body {
     padding: 6rem 1.5rem;
+  }
+
+  .tag {
+    background: transparent;
   }
 
   .title {
@@ -114,15 +133,35 @@ $family-sans-serif: 'Montserrat', BlinkMacSystemFont, -apple-system, 'Segoe UI',
 .is-variant1 {
   background-color: $variant1-background-color;
   color: $white;
+  position: relative;
 
-  .title,
-  .subtitle {
+  &::before {
+    background-image: url('../images/logo2.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 400px;
+    left: 0;
+    margin: auto 200px;
+    opacity: .05;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  .title {
     color: $white;
   }
 }
 
 .is-variant2 {
-  background-color: $variant2-background-color;
+  background: linear-gradient($variant2-background-color, $variant2-background-color), url('../images/landscape.jpg');
+  background-position: center 60%;
+  background-size: 100%;
   color: $white;
 
   .title,
@@ -132,12 +171,47 @@ $family-sans-serif: 'Montserrat', BlinkMacSystemFont, -apple-system, 'Segoe UI',
 }
 
 .is-variant3 {
-  background-color: $variant3-background-color;
+  background: linear-gradient($variant3-background-color, $variant3-background-color), url('../images/mountains.jpg');
+  background-position: center;
+  background-size: 100%;
   color: $white;
 
   .title,
   .subtitle {
     color: $white;
+  }
+}
+
+.is-variant5 {
+  background-color: $variant5-background-color;
+  color: $white;
+
+  .title,
+  .subtitle {
+    color: $white;
+  }
+}
+
+.is-variant6 {
+  background-color: $variant6-background-color;
+  position: relative;
+
+  &::before {
+    background-image: url('../images/logo2.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 400px;
+    left: 0;
+    margin: auto 200px;
+    opacity: .05;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
   }
 }
 
