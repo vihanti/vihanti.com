@@ -70,6 +70,11 @@ export function css () {
 
 export function images () {
   return gulp.src(paths.images.src)
+    .pipe(gulp.dest(paths.images.dest))
+}
+
+export function optimize () {
+  return gulp.src(paths.images.src)
     .pipe(image())
     .pipe(gulp.dest(paths.images.dest))
 }
