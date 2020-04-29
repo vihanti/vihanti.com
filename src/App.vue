@@ -37,15 +37,25 @@ export default {
 
     // Initialize cookie consent.
     window.cookieconsent.initialise({
+      cookie: {
+        domain: '.vihanti.com',
+        secure: true
+      },
       palette: {
         popup: {
-          background: '#252e39'
+          background: '#000'
         },
         button: {
-          background: '#14a7d0'
+          background: '#9ee71e'
         }
       },
-      theme: 'edgeless'
+      theme: 'edgeless',
+      content: {
+        'href': 'www.vihanti.com/privacy'
+      },
+      dismissOnTimeout: 10000,
+      dismissOnWindowClick: true,
+      dismissOnScroll: 300
     })
   }
 }
