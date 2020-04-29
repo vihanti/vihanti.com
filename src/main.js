@@ -9,9 +9,6 @@ Vue.use(VueRouter)
 
 import '@mdi/font/css/materialdesignicons.css'
 
-import CookieContent from 'vue-cookieconsent-component'
-Vue.component('cookie-consent', CookieContent)
-
 Vue.config.productionTip = false
 
 import App from '@/App.vue'

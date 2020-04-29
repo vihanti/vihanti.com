@@ -1,26 +1,21 @@
 <template>
   <div>
-    <cookie-consent/>
-
     <router-view></router-view>
 
     <app-footer></app-footer>
   </div>
 </template>
 
+<style lang="scss">
+@import '~cookieconsent/build/cookieconsent.min.css';
+</style>
+
 <script>
+import $ from 'jquery'
+import 'cookieconsent'
+
 import AppFooter from '@/components/AppFooter.vue'
 import WaypointAnimations from '@/mixins/WaypointAnimations.vue'
-
-// Handle clicking navbar burger icon.
-import $ from 'jquery'
-
-$(() => {
-  $('.navbar-burger').click(() => {
-    $('.navbar-burger').toggleClass('is-active')
-    $('.navbar-menu').toggleClass('is-active')
-  })
-})
 
 export default {
   name: 'App',
@@ -32,6 +27,26 @@ export default {
   ],
   metaInfo: {
     titleTemplate: '%s | Vihanti Digital Services'
+  },
+  mounted() {
+    // Handle clicking navbar burger icon.
+    $('.navbar-burger').click(() => {
+      $('.navbar-burger').toggleClass('is-active')
+      $('.navbar-menu').toggleClass('is-active')
+    })
+
+    // Initialize cookie consent.
+    window.cookieconsent.initialise({
+      palette: {
+        popup: {
+          background: '#252e39'
+        },
+        button: {
+          background: '#14a7d0'
+        }
+      },
+      theme: 'edgeless'
+    })
   }
 }
 </script>
