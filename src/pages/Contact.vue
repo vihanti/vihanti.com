@@ -37,7 +37,7 @@
             <b-field label="Email">
               <b-input name="_replyto" icon="email" type="email" required></b-input>
             </b-field>
-            <b-field label="Email">
+            <b-field label="Message">
               <b-input name="message" type="textarea" required></b-input>
             </b-field>
 
