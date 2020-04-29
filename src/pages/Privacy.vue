@@ -25,7 +25,7 @@
               When you fill out our contact form, we ask for your name and
               email address. That's just a convenience, so that you can email
               us right from the website. We use <a
-              href="https://formspree.io/">formspree.io</a> to do this. We'll
+              href="https://www.netlify.com/">netlify.com</a> to do this. We'll
               never sell your personal info to third parties, and we won't use
               your name or company in marketing statements without your
               permission, either.
@@ -134,13 +134,10 @@
             </p>
             <ul>
               <li>
-                <a href="https://www.godaddy.com/">GoDaddy</a>. Domain name registrar.
+                <a href="https://porkbun.com/">Porkbun</a>. Domain name registrar.
               </li>
               <li>
-                <a href="https://zeit.co/">zeit.co</a>. Web hosting.
-              </li>
-              <li>
-                <a href="https://formspree.io/">formspree.io</a>. Email forms.
+                <a href="https://www.netlify.com/">netlify.com</a>. Web hosting and forms.
               </li>
             </ul>
 

@@ -28,7 +28,9 @@
             </p>
           </div>
 
-          <form action="https://formspree.io/xjvyaqne" method="POST">
+          <form name="contact" method="POST" data-netlify="true" @submit="submit">
+            <input type="hidden" name="form-name" value="contact" />
+
             <b-field label="Name">
               <b-input name="name" icon="account" required></b-input>
             </b-field>
@@ -40,9 +42,34 @@
             </b-field>
 
             <div class="control">
-              <button class="button is-link">Send</button>
+              <button class="button is-link" type="submit">Send</button>
             </div>
           </form>
+
+          <section class="section">
+            <b-notification
+              :active.sync="submitSuccess"
+              type="is-success"
+              aria-close-label="Close notification"
+              role="alert"
+              auto-close
+            >
+              Thank you for your message! We'll be in touch soon to discuss how
+              we can unleash creativity for you!
+            </b-notification>
+
+            <b-notification
+              :active.sync="submitFailed"
+              type="is-warning"
+              aria-close-label="Close notification"
+              role="alert"
+            >
+              Oops! Sorry, something went wrong. Please
+              <a href="mailto:hello@vihanti.com">email</a> or
+              <a href="tel:+17209885523">call</a> us, so we can discuss how Vihanti
+              Digital Services can unleash creativity for you!
+            </b-notification>
+          </section>
         </div>
       </div>
     </section>
@@ -50,18 +77,45 @@
 </template>
 
 <script>
-import AppHeader from '@/components/AppHeader.vue'
+import $ from "jquery";
+import AppHeader from "@/components/AppHeader.vue";
 
 export default {
   name: "Contact",
   components: {
     AppHeader
   },
+  data() {
+    return {
+      submitSuccess: false,
+      submitFailed: false
+    };
+  },
   metaInfo: {
     title: "Contact",
     meta: [
-      { name: "description", content: "We'd love to talk about how we can help unleash creativity for your business!  Schedule a free discovery call today!" }
+      {
+        name: "description",
+        content:
+          "We'd love to talk about how we can help unleash creativity for your business!  Schedule a free discovery call today!"
+      }
     ]
+  },
+  methods: {
+    submit(e) {
+      e.preventDefault();
+
+      let form = $(this);
+      $.post(form.attr("action"), form.serialize())
+        .done(() => {
+          this.submitSuccess = true;
+          this.submitFailed = false;
+        })
+        .fail(() => {
+          this.submitSuccess = false;
+          this.submitFailed = true;
+        })
+    }
   }
-}
+};
 </script>
