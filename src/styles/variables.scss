@@ -1,0 +1,35 @@
+@import "~bulma/sass/utilities/initial-variables";
+@import "~bulma/sass/utilities/functions";
+
+$gold: #9ee71e;
+
+$footer-color: #08235b;
+$footer-border-color: #818078;
+$footer-link-color: #4e5878;
+$variant1-background-color: #09235a;
+$variant2-background-color: rgba(0, 0, 0, .8);
+$variant3-background-color: rgba(8, 36, 89, .5);
+$variant4-background-color: $white;
+$variant5-background-color: #08235b;
+$variant6-background-color: #ebebeb;
+$navbar-background-color: rgba(0, 0, 0, .95);
+$button-padding-horizontal: 1.5em;
+$control-height: 2.8em;
+$tabs-border-bottom-color: #2b2c2e;
+$tabs-link-color: #a9aaab;
+$tabs-link-hover-border-bottom-color: $white;
+$tabs-link-hover-color: $white;
+$tabs-link-active-border-bottom-color: $white;
+$tabs-link-active-color: $white;
+$text: $black;
+$title-color: #082459;
+$title-strong-color: $title-color;
+$subtitle-color: $title-color;
+$subtitle-strong-color: $title-color;
+
+$family-sans-serif: 'Montserrat', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+
+@import "~bulma/sass/utilities/derived-variables";
+@import "~bulma/sass/utilities/animations";
+@import "~bulma/sass/utilities/mixins";
+@import "~bulma/sass/utilities/controls";

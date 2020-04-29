@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 200;
+  src: url('~@/fonts/montserrat-v14-latin-200.eot');
+  src: local('Montserrat ExtraLight'), local('Montserrat-ExtraLight'),
+       url('~@/fonts/montserrat-v14-latin-200.eot?#iefix') format('embedded-opentype'),
+       url('~@/fonts/montserrat-v14-latin-200.woff2') format('woff2'),
+       url('~@/fonts/montserrat-v14-latin-200.woff') format('woff'),
+       url('~@/fonts/montserrat-v14-latin-200.ttf') format('truetype'),
+       url('~@/fonts/montserrat-v14-latin-200.svg#Montserrat') format('svg');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('~@/fonts/montserrat-v14-latin-regular.eot');
+  src: local('Montserrat Regular'), local('Montserrat-Regular'),
+       url('~@/fonts/montserrat-v14-latin-regular.eot?#iefix') format('embedded-opentype'),
+       url('~@/fonts/montserrat-v14-latin-regular.woff2') format('woff2'),
+       url('~@/fonts/montserrat-v14-latin-regular.woff') format('woff'),
+       url('~@/fonts/montserrat-v14-latin-regular.ttf') format('truetype'),
+       url('~@/fonts/montserrat-v14-latin-regular.svg#Montserrat') format('svg');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url('~@/fonts/montserrat-v14-latin-700.eot');
+  src: local('Montserrat Bold'), local('Montserrat-Bold'),
+       url('~@/fonts/montserrat-v14-latin-700.eot?#iefix') format('embedded-opentype'),
+       url('~@/fonts/montserrat-v14-latin-700.woff2') format('woff2'),
+       url('~@/fonts/montserrat-v14-latin-700.woff') format('woff'),
+       url('~@/fonts/montserrat-v14-latin-700.ttf') format('truetype'),
+       url('~@/fonts/montserrat-v14-latin-700.svg#Montserrat') format('svg');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  src: url('~@/fonts/montserrat-v14-latin-900.eot');
+  src: local('Montserrat Black'), local('Montserrat-Black'),
+       url('~@/fonts/montserrat-v14-latin-900.eot?#iefix') format('embedded-opentype'),
+       url('~@/fonts/montserrat-v14-latin-900.woff2') format('woff2'),
+       url('~@/fonts/montserrat-v14-latin-900.woff') format('woff'),
+       url('~@/fonts/montserrat-v14-latin-900.ttf') format('truetype'),
+       url('~@/fonts/montserrat-v14-latin-900.svg#Montserrat') format('svg');
+}
+
+@font-face {
+  font-family: 'Bank Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url('~@/fonts/Bank-Gothic-Medium.eot');
+  src: local('Bank Gothic Medium'), local('Bank-Gothic-Medium'),
+       url('~@/fonts/Bank-Gothic-Medium.eot?#iefix') format('embedded-opentype'),
+       url('~@/fonts/Bank-Gothic-Medium.woff2') format('woff2'),
+       url('~@/fonts/Bank-Gothic-Medium.woff') format('woff'),
+       url('~@/fonts/Bank-Gothic-Medium.ttf') format('truetype'),
+       url('~@/fonts/Bank-Gothic-Medium.svg') format('svg');
+}
