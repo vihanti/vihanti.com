@@ -27,7 +27,6 @@
     "jquery": "^3.5.0",
     "netlify-cli": "^2.48.0",
     "particles.js": "^2.0.0",
-    "prerender-spa-plugin": "^3.4.0",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "vue-meta": "^2.3.3",
