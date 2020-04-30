@@ -15,7 +15,7 @@ module.exports = {
       new FaviconsWebpackPlugin({
         logo: './src/assets/logo2.png'
       }),
-      new PrerenderSPAPlugin({
+      process.env.NODE_ENV === 'production' ? new PrerenderSPAPlugin({
         // Absolute path to compiled SPA
         staticDir: path.resolve(__dirname, 'dist'),
         // List of routes to prerender
@@ -28,7 +28,7 @@ module.exports = {
           '/services',
           '/terms'
         ]
-      }),
+      }) : () => {},
     ]
   },
   css: {
