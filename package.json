@@ -20,7 +20,6 @@
     "anicollection": "^1.0.0",
     "babel-eslint": "^10.1.0",
     "buefy": "^0.8.16",
-    "cookieconsent": "^3.1.1",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "favicons-webpack-plugin": "2.1.0",
