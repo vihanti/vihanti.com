@@ -12,6 +12,11 @@
     <div id="app">
       <router-view></router-view>
     </div>
+    <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+      <input name="name" type="text" />
+      <input name="email" type="email" />
+      <textarea name="message"></textarea>
+    </form>
     <!-- built files will be auto injected -->
   </body>
 </html>

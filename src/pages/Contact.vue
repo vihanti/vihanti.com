@@ -28,14 +28,14 @@
             </p>
           </div>
 
-          <form name="contact" method="POST" data-netlify="true" @submit="submit">
+          <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="contact" />
 
             <b-field label="Name">
               <b-input name="name" icon="account" required></b-input>
             </b-field>
             <b-field label="Email">
-              <b-input name="_replyto" icon="email" type="email" required></b-input>
+              <b-input name="email" icon="email" type="email" required></b-input>
             </b-field>
             <b-field label="Message">
               <b-input name="message" type="textarea" required></b-input>
