@@ -7,17 +7,23 @@
     <section class="section is-fullwidth">
       <div class="columns is-centered">
         <div class="column is-8">
-          <div class="columns">
-            <div class="column animated" data-animated="fadeInLeft">
+          <div class="columns is-vcentered">
+            <div class="column animated content" data-animated="fadeInLeft">
               <h2 class="title">Design</h2>
               <p>
                 Unleashing creativity is serious business. We want your
                 design to visually capture the heart of your business. That's
                 why we enjoy sitting down with you over a cup of coffee or
                 tea (virtually if need be) to understand the soul of your
-                business before we start. Plus with 8-10 initial designs and
-                unlimited revisions, we won't stop until you're happy.
+                business before we start. We specialize in:
               </p>
+              <ul>
+                <li>Logos</li>
+                <li>Websites</li>
+                <li>Business cards</li>
+                <li>Product packaging</li>
+                <li>Flyers</li>
+              </ul>
             </div>
             <div class="column is-paddingless">
               <div class="logos animated" data-animated="fadeIn">
@@ -54,7 +60,7 @@
               </div>
             </div>
           </div>
-          <div class="columns is-reverse-mobile">
+          <div class="columns is-reverse-mobile is-vcentered">
             <div class="column">
               <div class="logos animated" data-animated="fadeIn">
                 <div class="columns is-flex-mobile is-vcentered has-text-centered">
@@ -71,8 +77,8 @@
                 </div>
                 <div class="columns is-flex-mobile is-vcentered has-text-centered">
                   <div class="column">
-                    <a href="https://www.discourse.org">
-                      <img src="@/assets/tech/discourse.png" alt="Discourse" />
+                    <a href="https://flutter.dev/">
+                      <img src="@/assets/tech/flutter.png" alt="Flutter" />
                     </a>
                   </div>
                   <div class="column">
@@ -83,7 +89,7 @@
                 </div>
               </div>
             </div>
-            <div class="column animated" data-animated="fadeInRight">
+            <div class="column animated content" data-animated="fadeInRight">
               <h2 class="title">Craft</h2>
               <p>
                 We take pride in our craft. We believe that modern
@@ -91,22 +97,35 @@
                 businesses alike. Whether you need a website to promote your
                 business or an e-commerce site to sell your products, we have
                 the industry experience to make it happen at a price to match
-                your budget.
+                your budget. Here are some examples:
               </p>
+              <ul>
+                <li>First time online business presence, including website and email</li>
+                <li>Refresh website for modern, mobile friendly design</li>
+                <li>Optimize website for SEO peformance</li>
+                <li>Build custom mobile application for iOS and Android</li>
+              </ul>
             </div>
           </div>
-          <div class="columns">
-            <div class="column animated" data-animated="fadeInLeft">
+          <div class="columns is-vcentered">
+            <div class="column animated content" data-animated="fadeInLeft">
               <h2 class="title">Solve</h2>
               <p>
-                We know the fast pace of technology can be overwhelming.
-                We're here to help. Although it's true that we enjoy an
-                occasional nerd session, our years of experience has given us
-                a pragmatic approach. By listening carefully to what
-                troubles your business most, we creatively evaluate the vast
-                array of technology options to deliver real world value to
-                your business at an affordable price.
+                We know the fast pace of technology can be overwhelming.  We're
+                here to help. Although it's true that we enjoy an occasional
+                nerd session, our years of experience has given us a pragmatic
+                approach. By listening carefully to what troubles your business
+                most, we creatively evaluate the vast array of technology
+                options to build a custom solution that delivers real world
+                value to your business at an affordable price. While each
+                solution will be taylored to your needs, here are some examples
+                of ways that we might be able to help you:
               </p>
+              <ul>
+                <li>Build backend service to support a web frontend or mobile app</li>
+                <li>Optimize sales process by integrating inventory directly into e-commerce site</li>
+                <li>Automate data transfers between separate systems to reduce opex</li>
+              </ul>
             </div>
             <div class="column">
               <div class="logos animated" data-animated="fadeIn">
@@ -146,12 +165,12 @@
         <div class="column is-8 hero">
           <div class="hero-body">
             <div class="columns is-vcentered">
-              <div class="column is-size-4">Let us help unleash creativity for your business!</div>
+              <div class="column is-size-4">Let's discuss how we can unleash creativity for you!</div>
               <div class="column has-text-right">
                 <router-link
                   to="/contact"
                   class="button is-rounded is-dark is-small"
-                >Click here to get started</router-link>
+                >Contact Us Today</router-link>
               </div>
             </div>
           </div>
