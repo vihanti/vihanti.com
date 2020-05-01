@@ -14,10 +14,14 @@
             </p>
 
             <p class="has-text-centered">
+              <!-- Calendly link widget begin -->
+              <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+              <script src="https://assets.calendly.com/assets/external/widget.js" defer type="application/javascript"></script>
               <button
                 class="button is-rounded is-info"
                 onclick="Calendly.initPopupWidget({url: 'https://calendly.com/vihanti/discovery'});return false;"
               >Schedule Free Discovery Call</button>
+              <!-- Calendly link widget end -->
             </p>
 
             <p>Or, if you prefer, here are some other ways to contact us.</p>
