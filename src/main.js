@@ -25,12 +25,12 @@ const router = new VueRouter({
   mode: 'history',
   routes: [
     { path: '/', component: Home },
-    { path: '/about', component: About },
-    { path: '/careers', component: Careers },
-    { path: '/contact', component: Contact },
-    { path: '/privacy', component: Privacy },
-    { path: '/services', component: Services },
-    { path: '/terms', component: Terms },
+    { path: '/about(.html)?', component: About },
+    { path: '/careers(.html)?', component: Careers },
+    { path: '/contact(.html)?', component: Contact },
+    { path: '/privacy(.html)?', component: Privacy },
+    { path: '/services(.html)?', component: Services },
+    { path: '/terms(.html)?', component: Terms },
     { path: '*', component: NotFound }
   ],
   linkExactActiveClass: 'is-active',
