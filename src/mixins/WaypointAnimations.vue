@@ -1,39 +1,49 @@
 <script>
-import $ from 'jquery'
-import 'waypoints/lib/jquery.waypoints.js'
+import 'waypoints/lib/noframework.waypoints.js'
 
-function initAnimated() {
-  $('.animated')
-    .css('opacity', function () {
-      let animated = $(this).data('animated')
-      if (animated.indexOf('In') !== -1) {
-        return 0
-      }
-    })
-    .waypoint(function (direction) {
-      let animated = $(this.element).data('animated')
-      let animatedReverse = $(this.element).data('animated-reverse')
+let waypoints = []
 
-      if (direction === 'down') {
-        $(this.element).removeClass(animatedReverse).addClass(animated)
-      } else if (direction === 'up' && animatedReverse) {
-        $(this.element).removeClass(animated).addClass(animatedReverse)
-      }
-    }, {
+function updateAnimated() {
+  if (waypoints) {
+    waypoints.forEach((waypoint) => waypoint.destroy())
+    waypoints = []
+  }
+
+  let elements = document.getElementsByClassName('animated')
+  waypoints = Array.prototype.map.call(elements, (element) => {
+    if (element.dataset.animated.indexOf('In') !== -1) {
+      element.style.opacity = 0
+    }
+
+    return new Waypoint({
+      element: element,
+      handler: function (direction) {
+        let animated = element.dataset.animated
+        let animatedReverse = element.dataset.animatedReverse
+
+        if (direction === 'down') {
+          this.element.classList.remove(animatedReverse)
+          this.element.classList.add(animated)
+        } else if (direction === 'up' && animatedReverse) {
+          this.element.classList.remove(animated)
+          this.element.classList.add(animatedReverse)
+        }
+      },
       offset: function () {
-        return $(this.element).data('offset') || Math.ceil(this.context.element.innerHeight * 0.9)
+        return this.element.dataset.offset || Math.ceil(this.context.element.innerHeight * 0.9)
       }
     })
+  })
 }
 
 export default {
   name: 'WaypointAnimations',
   mounted () {
-    initAnimated()
+    updateAnimated()
   },
   updated () {
     this.$nextTick(() => {
-      initAnimated()
+      updateAnimated()
     })
   }
 }

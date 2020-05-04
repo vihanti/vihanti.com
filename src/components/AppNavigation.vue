@@ -1,25 +1,13 @@
 <template>
-  <nav class="navbar" aria-label="main navigation">
-    <div class="navbar-brand">
-      <router-link class="navbar-item" to="/">
+  <b-navbar :transparent="true">
+    <template slot="brand">
+      <b-navbar-item tag="router-link" to="/">
         <img class="logo" src="@/assets/logo.png" alt="Vihanti Digital Services" />
-      </router-link>
+      </b-navbar-item>
+    </template>
 
-      <a
-        role="button"
-        class="navbar-burger burger"
-        aria-label="menu"
-        aria-expanded="false"
-        data-target="navbarTop"
-      >
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-
-    <div id="navbarTop" class="navbar-menu">
-      <div class="navbar-end tabs">
+    <template slot="end">
+      <div class="navbar-item tabs">
         <ul>
           <router-link
             v-for="link in links"
@@ -36,8 +24,8 @@
           </router-link>
         </ul>
       </div>
-    </div>
-  </nav>
+    </template>
+  </b-navbar>
 </template>
 
 <script>
@@ -56,21 +44,15 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.navbar {
-  .logo {
-    margin: .5em;
-    max-height: 5em;
-  }
+.navbar .logo {
+  margin: .5em;
+  max-height: 5em;
+}
 
-  .navbar-menu {
-    font-family: 'Bank Gothic', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-    margin-right: 2em;
+.navbar-item {
+  font-family: 'Bank Gothic', BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 
-    .navbar-item {
-      background: transparent;
-      font-size: smaller;
-      text-transform: uppercase;
-    }
-  }
+  font-size: smaller;
+  text-transform: uppercase;
 }
 </style>

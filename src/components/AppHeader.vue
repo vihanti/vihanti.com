@@ -1,5 +1,6 @@
 <template>
   <section class="header hero has-text-centered is-relative">
+    <slot name="top"></slot>
     <div class="hero-head">
       <app-navigation></app-navigation>
     </div>

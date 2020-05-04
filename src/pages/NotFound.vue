@@ -12,7 +12,6 @@
 
 <script>
 import AppHeader from '@/components/AppHeader.vue'
-import $ from 'jquery'
 
 export default {
   name: "NotFound",
@@ -26,10 +25,10 @@ export default {
     ]
   },
   mounted () {
-    $('html').addClass('is-fullheight')
+    document.documentElement.classList.add('is-fullheight')
   },
   destroyed() {
-    $('html').removeClass('is-fullheight')
+    document.documentElement.classList.remove('is-fullheight')
   }
 }
 </script>

@@ -1,16 +1,9 @@
-const webpack = require('webpack')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const SitemapPlugin = require('sitemap-webpack-plugin').default
 
 module.exports = {
   configureWebpack: {
     plugins: [
-      new webpack.ProvidePlugin({
-        $: 'jquery',
-        jquery: 'jquery',
-        'window.jQuery': 'jquery',
-        jQuery: 'jquery'
-      }),
       new FaviconsWebpackPlugin({
         logo: './src/assets/logo2.png'
       }),

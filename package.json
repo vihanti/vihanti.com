@@ -24,7 +24,6 @@
     "eslint-plugin-vue": "^6.2.2",
     "favicons-webpack-plugin": "2.1.0",
     "fibers": "^5.0.0",
-    "jquery": "^3.5.0",
     "netlify-cli": "^2.48.0",
     "particles.js": "^2.0.0",
     "sass": "^1.26.5",
@@ -46,6 +45,9 @@
     ],
     "parserOptions": {
       "parser": "babel-eslint"
+    },
+    "globals": {
+      "Waypoint": true
     },
     "rules": {}
   },

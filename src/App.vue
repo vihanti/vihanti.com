@@ -7,8 +7,6 @@
 </template>
 
 <script>
-import $ from 'jquery'
-
 import AppFooter from '@/components/AppFooter.vue'
 import WaypointAnimations from '@/mixins/WaypointAnimations.vue'
 import { SnackbarProgrammatic as Snackbar } from 'buefy'
@@ -25,12 +23,6 @@ export default {
     titleTemplate: '%s | Vihanti Digital Services'
   },
   mounted() {
-    // Handle clicking navbar burger icon.
-    $('.navbar-burger').click(() => {
-      $('.navbar-burger').toggleClass('is-active')
-      $('.navbar-menu').toggleClass('is-active')
-    })
-
     if (!localStorage.cookieconsent) {
       Snackbar.open({
         message: 'This website uses cookies to optimize your experience.  See our <a href="/privacy">privacy policy</a> for more information.',

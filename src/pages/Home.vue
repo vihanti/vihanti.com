@@ -1,6 +1,11 @@
 <template>
   <div>
     <app-header>
+      <template v-slot:top>
+        <div id="particles">
+        </div>
+      </template>
+
       <div class="container">
         <h2 class="subtitle">&mdash; Creativity &mdash;</h2>
         <h1
@@ -212,7 +217,6 @@
 
 <script>
 import AppHeader from "@/components/AppHeader.vue";
-import $ from 'jquery'
 import 'particles.js'
 
 export default {
@@ -232,12 +236,6 @@ export default {
     }
   },
   mounted() {
-    $('<div id="particles"></div')
-      .css('position', 'absolute')
-      .width('100%')
-      .height('100%')
-      .appendTo('.header')
-
     window.particlesJS.load('particles', '/particles.json')
   },
   metaInfo: {
@@ -251,6 +249,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+#particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
 .questions .tag {
   background-color: transparent;
   border: 1px solid $gold;
