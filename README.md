@@ -1,4 +1,6 @@
-# 
+# vihanti.com
+
+This is the source for [vihanti.com](https://www.vihanti.com).
 
 ## Project setup
 ```
@@ -19,6 +21,3 @@ yarn build
 ```
 yarn lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
