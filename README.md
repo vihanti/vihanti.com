@@ -17,6 +17,12 @@ yarn serve
 yarn build
 ```
 
+To get a code size report, use:
+
+```
+yarn build --report
+```
+
 ### Lints and fixes files
 ```
 yarn lint
