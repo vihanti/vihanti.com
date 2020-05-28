@@ -135,6 +135,10 @@ export default {
   .subtitle {
     color: $white;
   }
+
+  a:hover {
+    color: $footer-link-color;
+  }
 }
 
 .is-variant6 {
