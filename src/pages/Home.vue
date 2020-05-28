@@ -25,12 +25,13 @@
             <div class="column has-text-centered">
               <h2 class="title">What we offer</h2>
               <p>
-                When you need a fresh approach, our global team of experienced
-                tech professionals are here for you. We believe that the latest
-                technology and modern designs should be accessible to
-                businesses of all sizes and budgets.
+                We are a global software consultancy focused on unleashing
+                creativity for your business.  We specialize in cloud-based
+                platforms, including frontend and backend software development
+                with a strong devops emphasis leveraging the latest advances in
+                everything-as-code to deliver reliable solutions for our
+                customers.
               </p>
-              <p class="is-italic">Let us unleash creativity for you!</p>
             </div>
           </div>
 
@@ -43,9 +44,9 @@
                 </h3>
                 <p>
                   We want to help you succeed in the marketplace with a fresh
-                  design that makes your message shine. We specialize in
-                  creative logos, modern websites, and professional business
-                  cards to declare your heart to the world.
+                  design that makes your message shine. We offer custom logos,
+                  modern websites, and professional business cards to declare
+                  your heart to the world.
                 </p>
                 <p>
                   <router-link to="/services">

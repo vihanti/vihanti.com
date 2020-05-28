@@ -15,7 +15,7 @@
                 design to visually capture the heart of your business. That's
                 why we enjoy sitting down with you over a cup of coffee or
                 tea (virtually if need be) to understand the soul of your
-                business before we start. We specialize in:
+                business before we start. We offer custom designs for:
               </p>
               <ul>
                 <li>Logos</li>
@@ -116,8 +116,8 @@
                 nerd session, our years of experience has given us a pragmatic
                 approach. By listening carefully to what troubles your business
                 most, we creatively evaluate the vast array of technology
-                options to build a custom solution that delivers real world
-                value to your business at an affordable price. While each
+                options to build a custom solution that reliably delivers real
+                world value to your business at an affordable price. While each
                 solution will be taylored to your needs, here are some examples
                 of ways that we might be able to help you:
               </p>
