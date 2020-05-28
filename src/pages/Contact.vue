@@ -24,8 +24,6 @@
               <!-- Calendly link widget end -->
             </p>
 
-            <p>Or, if you prefer, here are some other ways to contact us.</p>
-
             <p class="has-text-centered">
               <a href="mailto:hello@vihanti.com">hello@vihanti.com</a> |
               <a href="tel:+17209885523">+1 720-988-5523</a>
