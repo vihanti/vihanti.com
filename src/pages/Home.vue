@@ -25,12 +25,11 @@
             <div class="column has-text-centered">
               <h2 class="title">What we offer</h2>
               <p>
-                We are a global software consultancy focused on unleashing
-                creativity for your business.  We specialize in cloud-based
-                platforms, including frontend and backend software development
-                with a strong devops emphasis leveraging the latest advances in
-                everything-as-code to deliver reliable solutions for our
-                customers.
+                We are a global software consultancy specializing in
+                cloud-based platforms, including frontend and backend software
+                development with a strong devops emphasis leveraging the latest
+                advances in everything-as-code to deliver reliable solutions
+                for our customers.
               </p>
             </div>
           </div>
