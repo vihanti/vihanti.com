@@ -109,7 +109,7 @@
 
           <div class="columns is-centered">
             <div class="column box is-8">
-              <b-carousel icon-pack="fas">
+              <b-carousel>
                 <b-carousel-item v-for="(question, i) in questions" :key="i">
                   <section class="hero">
                     <div class="hero-body has-text-centered">{{ question }}</div>
