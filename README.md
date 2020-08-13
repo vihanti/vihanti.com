@@ -19,7 +19,7 @@ This is the source for [vihanti.com](https://www.vihanti.com).
 yarn serve
 ```
 
-After making changes, submit a [pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests) to github.  When the change has been approved, merge it to the master branch.  This will automatically trigger deployment to production.
+After making changes, submit a [pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests) to github.  When the change has been approved, merge it to the main branch.  This will automatically trigger deployment to production.
 
 ### Compiles and minifies for production
 ```
