@@ -9,7 +9,6 @@
 <script>
 import AppFooter from '@/components/AppFooter.vue'
 import WaypointAnimations from '@/mixins/WaypointAnimations.vue'
-import { SnackbarProgrammatic as Snackbar } from 'buefy'
 
 export default {
   name: 'App',
@@ -21,19 +20,6 @@ export default {
   ],
   metaInfo: {
     titleTemplate: '%s | Vihanti Digital Services'
-  },
-  mounted() {
-    if (!localStorage.cookieconsent) {
-      Snackbar.open({
-        message: 'This website uses cookies to optimize your experience.  See our <a href="/privacy">privacy policy</a> for more information.',
-        duration: 10000,
-        position: 'is-bottom-left',
-        type: 'is-warning',
-        onAction: () => {
-          localStorage.cookieconsent = true
-        }
-      })
-    }
   }
 }
 </script>

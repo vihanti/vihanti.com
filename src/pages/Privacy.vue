@@ -9,7 +9,7 @@
         <div class="column is-8">
           <div class="content">
             <p>
-              <em>Last updated: January 29, 2020</em>
+              <em>Last updated: December 21, 2020</em>
             </p>
 
             <p>
@@ -25,7 +25,7 @@
               When you fill out our contact form, we ask for your name and
               email address. That's just a convenience, so that you can email
               us right from the website. We use <a
-              href="https://www.netlify.com/">netlify.com</a> to do this. We'll
+              href="https://netlify.com/">Netlify</a> to do this. We'll
               never sell your personal info to third parties, and we won't use
               your name or company in marketing statements without your
               permission, either.
@@ -34,9 +34,7 @@
             <p>
               When you write to Vihanti Digital Services with a question or to
               ask for help, we'll keep that correspondence, and the email
-              address, for future reference. When you browse our marketing
-              pages, we'll track that for statistical purposes (like conversion
-              rates and to test new designs). We also store any information you
+              address, for future reference. We also store any information you
               volunteer, like surveys, for as long as it makes sense.
             </p>
 
@@ -137,7 +135,7 @@
                 <a href="https://porkbun.com/">Porkbun</a>. Domain name registrar.
               </li>
               <li>
-                <a href="https://www.netlify.com/">netlify.com</a>. Web hosting and forms.
+                <a href="https://netlify.com/">Netlify</a>. Web hosting and forms.
               </li>
             </ul>
 
